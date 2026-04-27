@@ -32,7 +32,7 @@ const {
 } = process.env;
 
 if (!GOOGLE_CLIENT_ID || !GOOGLE_CLIENT_SECRET) {
-  console.error("❌  Defina GOOGLE_CLIENT_ID e GOOGLE_CLIENT_SECRET no .env");
+  console.error("Defina GOOGLE_CLIENT_ID e GOOGLE_CLIENT_SECRET no .env");
   process.exit(1);
 }
 
@@ -195,7 +195,7 @@ app.get("/dashboard", requireAuth, (req: Request, res: Response) => {
 // ── Start ──────────────────────────────────────────────────────────────────
 
 app.listen(Number(PORT), () => {
-  console.log(`✅  Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando em http://localhost:${PORT}`);
   console.log(`    Login:     http://localhost:${PORT}/auth/login`);
   console.log(`    Dashboard: http://localhost:${PORT}/dashboard`);
 });
